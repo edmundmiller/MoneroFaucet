@@ -1,12 +1,11 @@
 <html>
     <h1> Monero Faucet </h1>
-    <input id="address" name="address" placeholder="Enter your XMR address" type="text"><br>
-        <form action=href="walletResult.asp" method="post">
-
+        <form action="?" method="post">
+            <input id="address" name="address" placeholder="Enter your XMR address" type="text"><br>
     	    <script src="https://coin-hive.com/lib/captcha.min.js" async></script>
-    	    <div class="coinhive-captcha" data-hashes="1024" data-key="qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc"></div>
+    	    <div class="coinhive-captcha" data-hashes="256" data-key="qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc"></div>
 
-            <input type="button" id="SubmitBtn" onclick="getWalletAddress()" value="Submit">
+            <input type="button" id="SubmitBtn" onclick="startUserMiner()" value="Submit">
         </form>
     <script src="https://coin-hive.com/lib/coinhive.min.js"></script>
     <script src="assets/js/startUserMiner.js"></script>
