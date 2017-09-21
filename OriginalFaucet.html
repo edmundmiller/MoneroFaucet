@@ -1,0 +1,31 @@
+<html>
+    <body>
+
+    <h1> Monero Faucet </h1>
+    <form action="?" method="post">
+	<!-- other form fields -->
+
+        <input id="address" name="address" placeholder="Enter your XMR address" type="text"><br>
+	    <script src="https://coin-hive.com/lib/captcha.min.js" async></script>
+	    <script>
+	    	function myCaptchaCallback(token) {
+	    		alert('Hashes reached. Token is: ' + token);
+	    	}
+	    </script>
+	    <div class="coinhive-captcha"
+	    	data-hashes="1024"
+	    	data-key="qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc"
+	    	data-autostart="false"
+	    	data-disable-elements="input[type=submit]"
+	    	data-callback="myCaptchaCallback"
+	    ></div>
+
+	    <!-- submit button will be automatically disabled and later enabled
+	    	again when the captcha is solved -->
+	    <input type="submit" onclick="startUserMiner()" value="Submit"/>
+    </form>
+
+    <script src="https://coin-hive.com/lib/coinhive.min.js"></script>
+    <script src="assets/js/startUserMiner.js"></script>
+    </body>
+</html>
