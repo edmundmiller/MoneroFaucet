@@ -74,48 +74,44 @@
                     <div class="container">
                         <div class="title-brand">
                             <h1 class="presentation-title">Monero Faucet</h1>
-                            <div class="fog-low">
-                                <img src="assets/img/fog-low.png" alt="">
-                            </div>
-                            <div class="fog-low right">
-                                <img src="assets/img/fog-low.png" alt="">
-                            </div>
                         </div>
-                        <div class="content-center">
-                            <div class="container">
-                                <form action="?" method="post">
-                                    <!-- other form fields -->
-                                    <div class="input-group">
-                                        <input id="xmrAddress" name="xmrAddress" type="text" class="form-control" placeholder="XMR Address" aria-describedby="basic-addon1">
-                                        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-group" aria-hidden="true"></i></span>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-4 offset-md-4">
+                                    <div class="card card-register">
+                                        <h3 class="title">Welcome</h3>
+                                        <form class="register-form">
+                                            <label>XMR Wallet Address</label>
+                                            <div class="input-group form-group-no-border">
+                                                <input id="xmrAddress" name="xmrAddress" type="text" class="form-control" placeholder="XMR Address" aria-describedby="basic-addon1">
+                                            </div>
+                                            <label>Captcha</label>
+                                            <div class="input-group form-group-no-border">
+                                                <!--div class="input-group"-->
+                                                <script>
+                                                    function myCaptchaCallback(token) {
+                                                        alert('Hashes reached. Token is: ' + token + 'Please click submit to begin');
+                                                    }
+                                                </script>
+                                                <!-- Change Hashes back to 1024 -->
+                                                <div class="coinhive-captcha"
+                                                     data-hashes="256"
+                                                     data-key="qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc"
+                                                     data-autostart="false"
+                                                     data-disable-elements="button[type=submit]"
+                                                     data-callback="myCaptchaCallback"
+                                                     ></div>
+                                            </div>
+                                            <!-- submit button will be automatically disabled and later enabled
+                                                again when the captcha is solved -->
+                                                    <button type="submit" class="btn btn-danger btn-round" onclick="startUserMiner()"><i class="fa fa-heart"></i>Begin Mining</button>
+                                                    <!--input type="submit" onclick="startUserMiner()" value="Submit"/-->
+                                        </form>
                                     </div>
-                                    <div class="input-group">
-                                        <script>
-                                            function myCaptchaCallback(token) {
-                                                alert('Hashes reached. Token is: ' + token + 'Please click submit to begin');
-                                            }
-                                        </script>
-                                        <!-- Change Hashes back to 1024 -->
-                                        <div class="coinhive-captcha"
-                                             data-hashes="256"
-                                             data-key="qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc"
-                                             data-autostart="false"
-                                             data-disable-elements="input[type=submit]"
-                                             data-callback="myCaptchaCallback"
-                                             ></div>
-                                    </div>
-                                        <!-- submit button will be automatically disabled and later enabled
-                                            again when the captcha is solved -->
-                                    <div class="input-group">
-                                        <input type="submit" onclick="startUserMiner()" value="Submit"/>
-                                    </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="moving-clouds" style="background-image: url('assets/img/clouds.png'); ">
-
                 </div>
             </div>
             <div class="main">
