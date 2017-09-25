@@ -14,7 +14,7 @@
 
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
         <link href="assets/css/paper-kit.css?v=2.0.1" rel="stylesheet"/>
-        <link href="assets/css/demo.css" rel="stylesheet" />
+        <!--link href="assets/css/demo.css" rel="stylesheet" /-->
 
         <!--     Fonts and icons     -->
         <link href='http://fonts.googleapis.com/css?family=Montserrat:400,300,700' rel='stylesheet' type='text/css'>
@@ -72,14 +72,18 @@
                 <div class="content-center">
                     <div class="container">
                         <div class="title-brand">
-                            <h1 class="presentation-title">Monero Faucet</h1>
+                            <h1>Monero Faucet</h1>
                         </div>
                     </div>
+                    <div class="content-center">
                     <div class="container">
                         <div class="row">
-                            <!--div class="col-md-4 offset-md-4"-->
-                            <div class="card card-register">
+                            <div class="col-md-4 offset-md-4">
+                                <div class="card card-register">
                                 <h3 class="title">Welcome</h3>
+                                <div style="text-align:center;">
+                                    <img src="assets/img/xmr.svg" alt="sign-in-xmr" style="width:128px;height:128px;">
+                                </div>
                                 <form class="register-form">
                                     <label>XMR Wallet Address</label>
                                     <div class="input-group form-group-no-border">
@@ -90,9 +94,9 @@
                                         <!--div class="input-group form-group-no-border"-->
                                         <!--div class="input-group"-->
                                         <script>
-function myCaptchaCallback(token) {
-    alert('Hashes reached. Token is: ' + token + 'Please click submit to begin');
-}
+                                            function myCaptchaCallback(token) {
+                                                alert('Hashes reached. Token is: ' + token + 'Please click submit to begin');
+                                            }
                                         </script>
                                         <!-- Change Hashes back to 1024 -->
                                         <div class="coinhive-captcha"
@@ -113,6 +117,7 @@ function myCaptchaCallback(token) {
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
