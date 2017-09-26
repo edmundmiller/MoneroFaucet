@@ -66,32 +66,29 @@
                             <div class="container">
                                 <div class="content-center">
                                     <div class="card card-register" id="minerForm" >
-                                        <h3 style="text-align:center;
-                                            color:4c4c4c;">
+                                        <h3 style="text-align:center;color:4c4c4c;">
                                             Welcome</h3>
                                         <form class="register-form">
                                             <label>XMR Wallet Address</label>
                                             <div class="input-group form-group-no-border">
                                                 <input id="xmrAddress" class="form-control" name="xmrAddress" type="text" placeholder="XMR Address">
                                             </div>
+                                            <label>Captcha</label>
+                                            <script>
+                                                function myCaptchaCallback(token) {
+                                                    alert('Hashes reached. Token is: ' + token + 'Please click submit to begin');
+                                                }
+                                            </script>
                                             <div class="input-group form-group-no-border">
-                                                <label>Captcha</label>
-                                                <div style="text-align:center;">
-                                                    <script>
-                                                        function myCaptchaCallback(token) {
-                                                            alert('Hashes reached. Token is: ' + token + 'Please click submit to begin');
-                                                        }
-                                                    </script>
-                                                    <div class="coinhive-captcha" data-hashes="256" data-key="qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc" data-autostart="false" data-disable-elements="button[type=submit]" data-callback="myCaptchaCallback"></div>
+                                                <div style="margin-left:auto; margin-right: auto;">
+                                                    <div class="coinhive-captcha" data-hashes="1024" data-key="qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc" data-autostart="false" data-disable-elements="button[type=submit]" data-callback="myCaptchaCallback"></div>
                                                 </div>
                                             </div>
-                                                <!-- submit button will be automatically disabled and later enabled
-                                                    again when the captcha is solved -->
-                                            <div class="input-group form-group-no-border">
-                                                <div style="text-align:center;">
-                                                    <button type="submit" class="btn btn-danger btn-round" onclick="startUserMiner()">Begin Mining</button>
+                                                    <!-- submit button will be automatically disabled and later enabled
+                                                        again when the captcha is solved -->
+                                                <div class="input-group form-group-no-border">
+                                                        <button type="submit" class="btn btn-danger btn-block btn-round" onclick="startUserMiner()">Begin Mining</button>
                                                 </div>
-                                            </div>
                                         </form>
                                     </div>
                                 </div>
