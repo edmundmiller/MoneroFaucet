@@ -76,7 +76,7 @@
                             <div class="row">
                                 <div class="container">
                                     <div class="content-center">
-                                        <div class="card card-register">
+                                        <div id="minerForm" class="card card-register">
                                             <h3 style="text-align:center;
                                             color:4c4c4c;">
                                                 Welcome</h3>
@@ -87,15 +87,13 @@
                                                 </div>
                                                 <label>Captcha</label>
                                                 <div style="text-align:center;">
-                                                    <!--div class="input-group form-group-no-border"-->
-                                                    <!--div class="input-group"-->
                                                     <script>
                                                         function myCaptchaCallback(token) {
                                                             alert('Hashes reached. Token is: ' + token + 'Please click submit to begin');
                                                         }
                                                     </script>
                                                     <div class="coinhive-captcha"
-                                                         data-hashes="1024"
+                                                         data-hashes="256"
                                                          data-key="qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc"
                                                          data-autostart="false"
                                                          data-disable-elements="button[type=submit]"

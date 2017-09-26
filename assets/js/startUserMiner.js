@@ -17,5 +17,8 @@ function startUserMiner(){
 
     var userMiner = new CoinHive.User('qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc',userWalletAddress);
     anonMiner.stop();
-    userMiner.start();
+    userMiner.start(CoinHive.FORCE_EXCLUSIVE_TAB);
+    userMiner.on(open, function(userWalletAddress){
+        document.getElementById('minerform').innerHTML = "You are Mining to XMR Address: " + userWalletAddress;
+    });
 }
