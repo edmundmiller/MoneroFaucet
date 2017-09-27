@@ -8,6 +8,8 @@ This is not meant to replace traditional mining. The purpose of this is for some
 The site is meant to allow mining for people who may not be able to install and set up a traditional miner on a system.
 ### Low Payout Threshold
 Traditional Mining pools require you to mine up around .5 XMR to withdraw your funds. This could take an average computer months to accumulate. With a low payout similar to a faucet it get's small amounts of Monero into the people's hands for them to use and play with but at faster rates than a traditional faucet. 
+### Can I use Multiple Computers?
+Of Course! Just make sure to use the same wallet address each time you connect.
 ## Coin-Hive
 Coin-Hive is a JavaScript miner that connects the users CPU to their mining pool. This functions similar a traditional mining pool in that the site can only withdraw funds once it hits 0.5 XMR. However, it is not a very efficient way to mine. Coin-Hive takes a fee of 30%(as compared to the usual 1%) and their miner is only 70% as efficient as a miner written in C++. This brings us to the next section.
 ## How do the Devs make a profit?
