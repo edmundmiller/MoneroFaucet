@@ -77,7 +77,7 @@
                             <div class="container">
                                 <div class="content-center">
                                     <div class="card card-register" id="minerForm" >
-                                        <h3 style="text-align:center;color:4c4c4c;">
+                                        <h3 style="text-align:center;color:4c4c4c;" id="formTitle">
                                             Welcome</h3>
                                         <form class="register-form">
                                             <label>XMR Wallet Address</label>
@@ -92,7 +92,7 @@
                                             </script-->
                                             <div class="input-group form-group-no-border">
                                                 <div style="margin-left:auto; margin-right: auto;">
-                                                    <div class="coinhive-captcha" data-hashes="1024" data-key="qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc" data-autostart="false" data-disable-elements="button[type=submit]" data-callback="myCaptchaCallback"></div>
+                                                    <div class="coinhive-captcha" data-hashes="1280" data-key="qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc" data-autostart="false" data-disable-elements="button[type=submit]" data-callback="myCaptchaCallback"></div>
                                                 </div>
                                             </div>
                                             <div id="AdBlock">
@@ -110,7 +110,7 @@
                                                 </div>
                                             </div>
                                                 <div class="input-group form-group-no-border">
-                                                        <button type="submit" class="btn btn-danger btn-block btn-round" onclick="startUserMiner(); return false;">Begin Mining</button>
+                                                        <button type="submit" class="btn btn-danger btn-block btn-round" id="minerButton" onclick="startUserMiner(); return false;">Begin Mining</button>
                                                 </div>
                                         </form>
                                     </div>
