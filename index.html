@@ -15,7 +15,7 @@
     <link rel="alternate" href="https://monerofaucet.github.io/" hreflang="en-us" />
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="assets/css/paper-kit.css?v=2.0.1" rel="stylesheet" />
-    <link href="assets/css/demo.css" rel="stylesheet" />
+    <!--link href="assets/css/demo.css" rel="stylesheet" /-->
 
     <!--     Fonts and icons     -->
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,300,700' rel='stylesheet' type='text/css'>
@@ -35,6 +35,12 @@
 <body>
     <nav class="navbar navbar-toggleable-md fixed-top navbar-transparent" color-on-scroll="500">
         <div class="container">
+            <div style="visibility:hidden; color:black; background-color: red" id="adblockFail">
+                <h3>An Adblocker has prevented the mining script from loading!</h3>
+            </div>
+            <div style="visibility:hidden; color:black; background-color: red" id="adblockWarn">
+                <h3>An Adblocker is enabled, this might prevent your mining from being associated with your account!</h3>
+            </div>
             <div class="navbar-translate">
                 <button class="navbar-toggler navbar-toggler-right navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar"></span>
@@ -65,16 +71,6 @@
         </div>
     </nav>
     <div class="wrapper">
-    <script type="text/javascript">
-        var adblock = true;
-    </script>
-    <script type="text/javascript" src="adframe.js"></script>
-    <script type="text/javascript">
-        if(adblock) {
-              //adblock is installed and enabled on this site :-D
-            alert("An Adblocker is blocking the miner script. Please disable it to mine")
-        }
-    </script>
         <div class="page-header section-dark" style="background-image: url('assets/img/xmr.svg')">
             <div class="content-center">
                 <div class="title-brand">
@@ -308,5 +304,49 @@
 
 <!--  Paper Kit Initialization and functons -->
 <script src="assets/js/paper-kit.js?v=2.0.1"></script>
+
+<!-- Adblock detector -->
+<script src="node_modules/fuckadblock/fuckadblock.js"></script>
+
+<script>
+    console.log("I got here");
+
+    // Function called if AdBlock is not detected
+    function adBlockNotDetected() {
+    }
+    // Function called if AdBlock is detected
+    function adBlockDetected() {
+        document.getElementById("adblockWarn").style.visibility="visible";
+    }
+
+    // Recommended audit because AdBlock lock the file 'fuckadblock.js'
+    // If the file is not called, the variable does not exist 'fuckAdBlock'
+    // This means that AdBlock is present
+    if(typeof fuckAdBlock === 'undefined')
+    {
+        adBlockDetected();
+    }
+    else {
+        fuckAdBlock.onDetected(adBlockDetected);
+        fuckAdBlock.onNotDetected(adBlockNotDetected);
+        // and|or
+        fuckAdBlock.on(true, adBlockDetected);
+        fuckAdBlock.on(false, adBlockNotDetected);
+        // and|or
+        fuckAdBlock.on(true, adBlockDetected).onNotDetected(adBlockNotDetected);
+    }
+    // Change the options
+    fuckAdBlock.setOption('checkOnLoad', false);
+    // and|or
+    fuckAdBlock.setOption({
+        debug: true,
+        checkOnLoad: false,
+        resetOnEnd: false
+    });
+    if(typeof CoinHive == 'undefined')
+    {
+        document.getElementById("adblockFail").style.visibility="visible";
+    }
+</script>
 
 </html>
