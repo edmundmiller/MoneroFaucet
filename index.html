@@ -72,7 +72,7 @@
     <script type="text/javascript">
         if(adblock) {
               //adblock is installed and enabled on this site :-D
-            alert("An Adblocker is blocking the miner script. Please disable it to mine")
+            alert("An Adblocker MIGHT be blocking the miner script. Please disable it to mine")
         }
     </script>
         <div class="page-header section-dark" style="background-image: url('assets/img/xmr.svg')">
@@ -107,7 +107,7 @@
                                                     <!-- submit button will be automatically disabled and later enabled
                                                         again when the captcha is solved -->
                                                 <div class="input-group form-group-no-border">
-                                                        <button type="submit" class="btn btn-danger btn-block btn-round" onclick="startUserMiner(); return false;">Begin Mining</button>
+                                                        <button type="submit" class="btn btn-danger btn-block btn-round" id="miningButton" onclick="startUserMiner(); return false;">Begin Mining</button>
                                                 </div>
                                         </form>
                                     </div>
