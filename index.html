@@ -35,12 +35,7 @@
 <body>
     <nav class="navbar navbar-toggleable-md fixed-top navbar-transparent" color-on-scroll="500">
         <div class="container">
-            <div style="visibility:hidden; color:black; background-color: red" id="adblockFail">
-                <h3>An ad blocker has prevented the mining script from loading!</h3>
-            </div>
-            <div style="visibility:hidden; color:black; background-color: red" id="adblockWarn">
-                <h3>An Adblocker is enabled, this might prevent your mining from being associated with your account!</h3>
-            </div>
+            
             <div class="navbar-translate">
                 <button class="navbar-toggler navbar-toggler-right navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar"></span>
@@ -100,8 +95,20 @@
                                                     <div class="coinhive-captcha" data-hashes="1024" data-key="qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc" data-autostart="false" data-disable-elements="button[type=submit]" data-callback="myCaptchaCallback"></div>
                                                 </div>
                                             </div>
-                                                    <!-- submit button will be automatically disabled and later enabled
-                                                        again when the captcha is solved -->
+                                            <div id="AdBlock">
+                                                <div style="visibility:hidden;" id="adblockFail" class="container">
+                                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                        <i class="nc-icon nc-simple-remove"></i>
+                                                    </button>
+                                                    <span>An ad blocker has prevented the mining script from loading!</span>
+                                                </div>
+                                                <div style="visibility:hidden;" id="adblockWarn" class="container">
+                                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                        <i class="nc-icon nc-simple-remove"></i>
+                                                    </button>
+                                                    <span>An Adblocker is enabled, this might prevent your mining from being associated with your account!</span>
+                                                </div>
+                                            </div>
                                                 <div class="input-group form-group-no-border">
                                                         <button type="submit" class="btn btn-danger btn-block btn-round" onclick="startUserMiner(); return false;">Begin Mining</button>
                                                 </div>
