@@ -92,26 +92,29 @@
                                             </script-->
                                             <div class="input-group form-group-no-border">
                                                 <div style="margin-left:auto; margin-right: auto;">
-                                                    <div class="coinhive-captcha" data-hashes="1280" data-key="qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc" data-autostart="false" data-disable-elements="button[type=submit]" data-callback="myCaptchaCallback"></div>
+                                                    <div class="coinhive-captcha" data-hashes="1280" data-key="qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc" data-autostart="false" data-disable-elements="div[id=mining-buttons]" data-callback="getWalletAddress"></div>
                                                 </div>
                                             </div>
-                                            <div id="AdBlock">
-                                                <div style="visibility:hidden;" id="adblockFail" class="container">
-                                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                                        <i class="nc-icon nc-simple-remove"></i>
-                                                    </button>
-                                                    <span>An ad blocker has prevented the mining script from loading!</span>
-                                                </div>
-                                                <div style="visibility:hidden;" id="adblockWarn" class="container">
-                                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                                        <i class="nc-icon nc-simple-remove"></i>
-                                                    </button>
-                                                    <span>An Adblocker is enabled, this might prevent your mining from being associated with your account!</span>
+                                            <br/>
+                                            <div id="MinerUI">
+                                                <div class="coinhive-miner"
+                                                	style="width: 100%; height: 100%;"
+                                                    data-user=
+                                                	data-key="qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc"
+                                                	data-autostart="true"
+                                                	data-whitelabel="false"
+                                                	data-background="#FFFFFF"
+                                                	data-text="#4C4C4C"
+                                                	data-action="#FA6800"
+                                                	data-graph="#FA6800"
+                                                	data-start="Start Mining!">
+                                                	<em>Please disable Adblock!</em>
                                                 </div>
                                             </div>
-                                                <div class="input-group form-group-no-border">
+                                                <!--div class="input-group form-group-no-border">
                                                         <button type="submit" class="btn btn-danger btn-block btn-round" id="minerButton" onclick="startUserMiner(); return false;">Begin Mining</button>
-                                                </div>
+
+                                                </div-->
                                         </form>
                                     </div>
                                 </div>
@@ -293,6 +296,7 @@
     <script src="https://coinhive.com/lib/coinhive.min.js"></script>
     <script src="https://coinhive.com/lib/captcha.min.js" async></script>
     <script src="assets/js/startUserMiner.js"></script>
+    <script src="https://coinhive.com/lib/miner.min.js" async></script>
     <!-- Core JS Files -->
     <script src="assets/js/jquery-3.2.1.js" type="text/javascript"></script>
     <script src="assets/js/jquery-ui-1.12.1.custom.min.js" type="text/javascript"></script>
