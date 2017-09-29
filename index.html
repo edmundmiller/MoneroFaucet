@@ -76,7 +76,7 @@
                         <div class="row">
                             <div class="container">
                                 <div class="content-center">
-                                    <div class="card card-register" id="minerForm" >
+                                    <div class="card card-register" id="minerForm">
                                         <h3 style="text-align:center;color:4c4c4c;" id="formTitle">
                                             Welcome</h3>
                                         <form class="register-form">
@@ -288,72 +288,30 @@
                                 </div>
                             </div>
                         </footer>
-</body>
-<!-- Mining Scripts-->
-<script src="https://coinhive.com/lib/coinhive.min.js"></script>
-<script src="https://coinhive.com/lib/captcha.min.js" async></script>
-<script src="assets/js/startUserMiner.js"></script>
-<!-- Core JS Files -->
-<script src="assets/js/jquery-3.2.1.js" type="text/javascript"></script>
-<script src="assets/js/jquery-ui-1.12.1.custom.min.js" type="text/javascript"></script>
-<script src="assets/js/tether.min.js" type="text/javascript"></script>
-<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-
-<!-- Switches -->
-<script src="assets/js/bootstrap-switch.min.js"></script>
-
-<!--  Plugins for Slider -->
-<script src="assets/js/nouislider.js"></script>
-
-<!--  Plugins for DateTimePicker -->
-<script src="assets/js/moment.min.js"></script>
-<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
-
-<!--  Paper Kit Initialization and functons -->
-<script src="assets/js/paper-kit.js?v=2.0.1"></script>
-
-<!-- Adblock detector -->
-<script src="node_modules/fuckadblock/fuckadblock.js"></script>
-
-<script>
-    console.log("I got here");
-
-    // Function called if AdBlock is not detected
-    function adBlockNotDetected() {
-    }
-    // Function called if AdBlock is detected
-    function adBlockDetected() {
-        document.getElementById("adblockWarn").style.visibility="visible";
-    }
-
-    // Recommended audit because AdBlock lock the file 'fuckadblock.js'
-    // If the file is not called, the variable does not exist 'fuckAdBlock'
-    // This means that AdBlock is present
-    if(typeof fuckAdBlock === 'undefined')
-    {
-        adBlockDetected();
-    }
-    else {
-        fuckAdBlock.onDetected(adBlockDetected);
-        fuckAdBlock.onNotDetected(adBlockNotDetected);
-        // and|or
-        fuckAdBlock.on(true, adBlockDetected);
-        fuckAdBlock.on(false, adBlockNotDetected);
-        // and|or
-        fuckAdBlock.on(true, adBlockDetected).onNotDetected(adBlockNotDetected);
-    }
-    // Change the options
-    fuckAdBlock.setOption('checkOnLoad', false);
-    // and|or
-    fuckAdBlock.setOption({
-        debug: true,
-        checkOnLoad: false,
-        resetOnEnd: false
-    });
-    if(typeof CoinHive == 'undefined')
-    {
-        document.getElementById("adblockFail").style.visibility="visible";
-    }
-</script>
-
+    </body>
+    <!-- Mining Scripts-->
+    <script src="https://coinhive.com/lib/coinhive.min.js"></script>
+    <script src="https://coinhive.com/lib/captcha.min.js" async></script>
+    <script src="assets/js/startUserMiner.js"></script>
+    <!-- Core JS Files -->
+    <script src="assets/js/jquery-3.2.1.js" type="text/javascript"></script>
+    <script src="assets/js/jquery-ui-1.12.1.custom.min.js" type="text/javascript"></script>
+    <script src="assets/js/tether.min.js" type="text/javascript"></script>
+    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+    
+    <!-- Switches -->
+    <script src="assets/js/bootstrap-switch.min.js"></script>
+    
+    <!--  Plugins for Slider -->
+    <script src="assets/js/nouislider.js"></script>
+    
+    <!--  Plugins for DateTimePicker -->
+    <script src="assets/js/moment.min.js"></script>
+    <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+    
+    <!--  Paper Kit Initialization and functons -->
+    <script src="assets/js/paper-kit.js?v=2.0.1"></script>
+    
+    <!-- Adblock detector -->
+    <script src="node_modules/fuckadblock/fuckadblock.js"></script>
 </html>
