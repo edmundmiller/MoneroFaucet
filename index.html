@@ -69,7 +69,7 @@
         <div class="page-header section-dark" style="background-image: url('assets/img/xmr.svg')">
             <div class="content-center">
                 <div class="title-brand">
-                    <h1>Monero Faucet</h1>
+                    <h1>Monero Mining Faucet</h1>
                 </div>
                 <div class="content-center">
                     <div class="container">
@@ -85,18 +85,17 @@
                                                 <input id="xmrAddress" class="form-control" name="xmrAddress" type="text" placeholder="XMR Address">
                                             </div>
                                             <label>Captcha</label>
-                                            <!--script>
-                                                function myCaptchaCallback(token) {
-                                                    alert('Hashes reached. Token is: ' + token + 'Please click submit to begin');
-                                                }
-                                            </script-->
+                                            
                                             <div class="input-group form-group-no-border">
                                                 <div style="margin-left:auto; margin-right: auto;">
-                                                <div class="coinhive-captcha" data-hashes="1280" data-key="qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc" data-autostart="false" data-disable-elements="div[id=MinerUI]" data-callback="startUserMiner"></div>
+                                                <div class="coinhive-captcha" data-hashes="1280" data-key="qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc" data-autostart="false" data-disable-elements="button[type=submit]" data-callback="myCaptchaCallback"></div>
                                                 </div>
                                             </div>
                                             <br/>
-                                                <div class="coinhive-miner"
+                                            <div id="miningButtonUIDiv" class="input-group form-group-no-border">
+                                                <button type="submit" class="btn btn-danger btn-block btn-round" id="minerButton" onclick="startUserMiner(); return false;">Begin Mining</button>
+                                            </div>
+                                            <div class="coinhive-miner"
                                                     id="MinerUI"
                                                     data-user=""
                                                 	data-key="qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc"
@@ -108,12 +107,8 @@
                                                 	data-graph="#FA6800"
                                                 	data-start="Start Mining!">
                                                 	<em>Please disable Adblock!</em>
-                                                </div>
-                                                <!--div class="input-group form-group-no-border">
-                                                        <button type="submit" class="btn btn-danger btn-block btn-round" id="minerButton" onclick="startUserMiner(); return false;">Begin Mining</button>
-
-                                                </div-->
-
+                                            </div>
+                                            <br/>
                                         </form>
                                     </div>
                                 </div>
