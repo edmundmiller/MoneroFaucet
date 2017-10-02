@@ -1,7 +1,7 @@
 # Monero Mining Faucet
 This site uses Coin-Hive to allow users to mine for XMR using their CPU and receive small amounts of XMR.
 ## Why is it called a Faucet?
-Google.
+Google SEO.
 ## Who is this for?
 This is not meant to replace traditional mining. The purpose of this is for someone interested in earning a few XMR instead of traditional faucets. I recommend utilizing this site when you are not paying for electricity. Some examples might be using it while you're at school, at a coffee shop, or if you have very cheap electricity for whatever reason. Maybe you leave it running overnight or over the weekend on your work computer. 
 ### No Setup 
