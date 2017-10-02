@@ -62,9 +62,6 @@ function startUserMiner() {
 
     alert('You are now mining to: "' + userWalletAddress + '" Please leave this page open, the faucet will be dripping. You can close this Alert');
     document.getElementById('minerButton').innerHTML = 'Mining to: ' + userWalletAddress;
-    setInterval(function() {
-        document.getElementById('hashesCompleted').innerHTML = 'Total Hashes Completed: ' + userMiner.getAcceptedHashes()
-    }, 5000);
 
     var button = document.getElementById('minerButton');
     button.innerHTML = "Mining to: " + userWalletAddress;
@@ -86,4 +83,8 @@ function startUserMiner() {
     parent.appendChild(div);
 
     createiframe();
+
+    setInterval(function() {
+        document.getElementById('hashesCompleted').innerHTML = 'Total Hashes Completed: ' + userMiner.getAcceptedHashes()
+    }, 5000);
 }
