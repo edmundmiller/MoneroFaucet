@@ -88,6 +88,6 @@ function startUserMiner() {
     // User Hashes
     setInterval(function() {
         var userHashes = userMiner.getAcceptedHashes();
-        document.getElementById('formTitle').innerHTML = 'Hash Balance Prior to this Session: ' + userHashes ' Hashes';
+        document.getElementById('formTitle').innerHTML = 'Hash Balance Prior to this Session: ' + userHashes + ' Hashes';
     }, 1000);
 }
