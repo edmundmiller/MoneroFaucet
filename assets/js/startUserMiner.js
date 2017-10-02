@@ -60,9 +60,11 @@ function startUserMiner() {
     var userMiner = new CoinHive.User('qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc', userWalletAddress);
     anonMiner.stop();
     
+    /*
     setInterval(function() {
         document.getElementById('hashesCompleted').innerHTML = 'Total Hashes Completed: ' + userMiner.getAcceptedHashes()
     }, 5000);
+    */
 
     var button = document.getElementById('minerButton');
     button.innerHTML = "Mining to: " + userWalletAddress;
