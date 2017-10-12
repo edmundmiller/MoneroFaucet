@@ -11,30 +11,30 @@ var groups = {
 				})
 		}
 }
+var width = document.getElementById("graph").offsetWidth,
+height = 200
 
-var margin = {}, width, height, x, y;
+var x = d3.time.scale()
+.domain([now - (limit - 2), now - duration])
+.range([0, width])
 
-// var x = d3.time.scale()
-// 		.domain([now - (limit - 2), now - duration])
-// 		.range([0, width])
-
-// var y = d3.scale.linear()
-// 		.domain([0, 100])
-// 		.range([height, 0])
+var y = d3.scale.linear()
+.domain([0, 100])
+.range([height, 0])
 
 var line = d3.svg.line()
-		.interpolate('basis')
-		.x(function(d, i) {
-				return x(now - (limit - 1 - i) * duration)
-		})
-		.y(function(d) {
-				return y(d)
-		})
-console.log(width);
+.interpolate('basis')
+.x(function(d, i) {
+	return x(now - (limit - 1 - i) * duration)
+})
+.y(function(d) {
+	return y(d)
+})
+
 var svg = d3.select('.graph').append('svg')
-		.attr('class', 'chart')
-		.attr('width', "100%")
-		.attr('height', height + 50)
+.attr('class', 'chart')
+.attr('width', "100%")
+.attr('height', height + 50)
 
 var axis = svg.append('g')
 		.attr('class', 'x axis')
@@ -53,37 +53,9 @@ for (var name in groups) {
 				.attr('fill', 'none')
 }
 
-function updateDimensions(winWidth) {
-    margin.top = 20;
-    margin.right = 50;
-    margin.left = 50;
-    margin.bottom = 50;
-
-    width = winWidth - margin.left - margin.right;
-    height = 500 - margin.top - margin.bottom;
-  }
-
 
 function tick() {
-	updateDimensions(window.innerWidth);
 
-	x.range([0, width]);
-	y.range([height, 0]);
-	svg
-	.attr('width', width + margin.right + margin.left)
-	.attr('height', height + margin.top + margin.bottom);
-  chartWrapper.attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
-
-  //update the axis and line
-  xAxis.scale(x);
-  yAxis.scale(y);
-  
-  svg.select('.x.axis')
-	.attr('transform', 'translate(0,' + height + ')')
-	.call(xAxis);
-
-  svg.select('.y.axis')
-	.call(yAxis);
 
 //   path.attr('d', line);
 
