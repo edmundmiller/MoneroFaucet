@@ -96,7 +96,9 @@
                                         <div>
                                             <p id="sp"></p>
                                             <p id="th"></p>
-                                            <p id="ah"></p>
+<!--                                             
+                                            <p id="ah"></p> -->
+                                            <p id="totalHash"></p>
                                             <form class="register-form">
                                         <div class="input-group inline pull-right col-md-6 form-group-no-border">
                                             <button type="button" class="btn btn-info" onclick="miner.start()">Start</button>
@@ -353,5 +355,22 @@
 
 <!-- Adblock detector -->
 <script src="node_modules/fuckadblock/fuckadblock.js"></script>
+
+<script>
+$(document).ready(function(){ 
+    function getAddressData(){
+        $.get( "https://supportxmr.com/api/miner/41eRaNbwcpTfJfTEe3J1oTiauYoucZ6eKUha4RKmw6SPcpSrhU8QF5ReEpVtKxcRDqby4dFkHQ4VN76DCza9Bo4k23BNgkZ/stats/" + getParameterByName('xmrAddress'), function( data ) {
+    $("#totalHash").text("Total Hashes for Address = " + data.totalHash);
+    // alert(data.totalHash);
+}, "json");
+    }
+
+    setInterval(getAddressData, 30000);
+    getAddressData()
+
+  
+
+})
+</script>
 
 </html>

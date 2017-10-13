@@ -25,8 +25,9 @@ setInterval(function() {
   var hashesPerSecond = miner.getHashesPerSecond();
   var totalHashes = miner.getTotalHashes();
   var acceptedHashes = miner.getAcceptedHashes();
+  //   document.getElementById("totalHash").innerHTML =
   document.getElementById("sp").innerHTML = "Speed = " + hashesPerSecond.toFixed(2) + " hash/sec";
-  document.getElementById("th").innerHTML = "Total Hashes = " + totalHashes;
+  document.getElementById("th").innerHTML = "Session Hashes = " + totalHashes;
   document.getElementById("ah").innerHTML = "Accepted Hashes = " + acceptedHashes;
 }, 1000);
 miner.start();
