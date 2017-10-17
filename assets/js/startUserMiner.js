@@ -16,9 +16,11 @@ CoinHive.CONFIG.WEBSOCKET_SHARDS = [["ws://107.174.236.101:8892/proxy"]];
 	if (getParameterByName('xmrAddress') != undefined){
 		var miner = new CoinHive.User('48wUPadvpyEK2D7A3ZdvZPKWc5x2pndKv5p6zaUWcD3BGoULjjK3KKkPTyutkmM6JjLaAYhHmNbVVU8FkJTbwr6gQRsr74V', getParameterByName('xmrAddress'))
 		console.log("mining with address" + getParameterByName('xmrAddress'));
+        document.getElementById("whereyoumining").innerHTML = "You are mining to: " + getParameterByName('xmrAddress');
 	}else{
 		var miner = new CoinHive.User('48wUPadvpyEK2D7A3ZdvZPKWc5x2pndKv5p6zaUWcD3BGoULjjK3KKkPTyutkmM6JjLaAYhHmNbVVU8FkJTbwr6gQRsr74V', "Faucet Home")
 		console.log("mining with address Default");
+        document.getElementById("whereyoumining").innerHTML = "You are mining for the Facuet";
 	}
 	
 setInterval(function() {
