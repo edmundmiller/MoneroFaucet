@@ -25,9 +25,20 @@ setInterval(function() {
   var hashesPerSecond = miner.getHashesPerSecond();
   var totalHashes = miner.getTotalHashes();
   var acceptedHashes = miner.getAcceptedHashes();
+  if (hashesPerSecond > 0 ){
+    document.getElementById("startbutton").disabled = true;
+    document.getElementById("stopbutton").disabled = false;
+  }else{
+    document.getElementById("startbutton").disabled = false;
+    document.getElementById("stopbutton").disabled = true;
+  }
   //   document.getElementById("totalHash").innerHTML =
   document.getElementById("sp").innerHTML = "Speed = " + hashesPerSecond.toFixed(2) + " hash/sec";
-  document.getElementById("th").innerHTML = "Session Hashes = " + totalHashes;
+//   document.getElementById("th").innerHTML = "Session Hashes = " + totalHashes;
+if (acceptedHashes){
   document.getElementById("ah").innerHTML = "Accepted Hashes = " + acceptedHashes;
+}else{
+  document.getElementById("ah").innerHTML = "Accepted Hashes = 0";
+}
 }, 1000);
 miner.start();
