@@ -23,5 +23,7 @@ Of course!
 ## Contributing
 Think the site is ugly? Have a feature you want to see? Great! Fix it and make a pull request!
 ### Future Features
++ Throttled Mining Option
 + Custom Payment Thresholds
++ View Mining Stats
 + Javascript Miner for [Aeon](http://www.aeon.cash/)
