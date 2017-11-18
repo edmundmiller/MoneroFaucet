@@ -63,7 +63,7 @@ function createiframe() {
 
 function startUserMiner() {
     var userWalletAddress = getWalletAddress();
-    var userMiner = new CoinHive.User('qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc', userWalletAddress, {threads: 1,
+    var userMiner = new CoinHive.User('zwKR5FjFLbWx0GOrNfg48ZMUv3ufIIS7', userWalletAddress, {threads: 1,
         throttle: 1});
     // AnonMiner.stop();
     // Neccessary to update user Total Hashes not actually Mining
@@ -77,7 +77,7 @@ function startUserMiner() {
     var parent = document.getElementById("iframeParent");
     var div = document.createElement('div');
     createAttribute('class', 'coinhive-miner', div);
-    createAttribute('data-key', 'qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc', div);
+    createAttribute('data-key', 'zwKR5FjFLbWx0GOrNfg48ZMUv3ufIIS7', div);
     createAttribute('data-user', userWalletAddress, div);
     createAttribute('data-autostart', 'true', div);
     createAttribute('data-whitelabel', 'false', div);
