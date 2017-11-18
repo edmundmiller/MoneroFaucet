@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg" href="assets/img/xmr.svg">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/xmr.svg">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Ethereum Mining Faucet</title>
+    <meta name="description" content="Faucet for Ethereum that uses CoinHive Mining">
+    <meta name="Keywords" content="Ethereum,ETH,Faucet,Mining,CoinHive,Coin-Hive,Cryptocurrency,Free>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="alternate" href="https://miningfaucet.org/" hrefla displayHashesng="en-us" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/paper-kit.css?v=2.0.1" rel="stylesheet" />
+    <!--link href="assets/css/demo.css" rel="stylesheet" /-->
+
+    <!--     Fonts and icons     -->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,300,700' rel='stylesheet' type='text/css'>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type='text/css'>
+    <link href="assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/font-awesome-4.7.0/css">
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107034006-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-107034006-1');
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-toggleable-md fixed-top navbar-transparent" color-on-scroll="500">
+        <div class="container">
+            
+            <div class="navbar-translate">
+                <button class="navbar-toggler navbar-toggler-right navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-bar"></span>
+                        <span class="navbar-toggler-bar"></span>
+                        <span class="navbar-toggler-bar"></span>
+                    </button>
+                <a class="navbar-brand" href="https://miningfaucet.org/">Monero Mining Faucet</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="XMR Wallet on My Monero" data-placement="bottom" href="https://mymonero.com/#/" target="_blank">
+                            <i class="fa fa-hashtag"></i>
+                            <p class="hidden-lg-up">My Monero</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Star on GitHub" data-placement="bottom" href="https://github.com/MoneroFaucet/MoneroFaucet.github.io" target="_blank">
+                            <i class="fa fa-github" aria-hidden="true"></i>
+                            <p class="hidden-lg-up">GitHub</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#Acknowledgements" class="nav-link">Acknowledgements</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="wrapper">
+        <div class="page-header section-dark" style="background-image: url('assets/img/xmr.svg')">
+            <div class="content-center">
+                <div class="title-brand">
+                    <h1>Ethereum Mining Faucet</h1>
+                </div>
+                <div class="content-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="container">
+                                <div class="content-center">
+                                    <div class="card card-register" id="minerForm">
+                                        <h3 style="text-align:center;color:4c4c4c;" id="formTitle">
+                                            Welcome</h3>
+                                        <div id="hashesCompleted"></div>
+                                        <form class="register-form">
+                                            <label>ETH Wallet Address</label>
+                                            <div class="input-group form-group-no-border">
+                                                <input id="ethAddress" class="form-control" name="ethAddress" type="text" placeholder="ETH Address">
+                                            </div>
+                                            <label>Captcha</label>
+                                            
+                                            <div class="input-group form-group-no-border">
+                                                <div style="margin-left:auto; margin-right: auto;">
+                                                <div class="coinhive-captcha" data-hashes="1280" data-key="qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc" data-autostart="false" data-disable-elements="button[type=submit]" data-callback="myCaptchaCallback"></div>
+                                                </div>
+                                            </div>
+                                            <div id="miningButtonUIDiv" class="input-group form-group-no-border">
+                                                <button type="submit" class="btn btn-danger btn-block btn-round" id="minerButton" onclick="startUserMiner(); return false;">Begin Mining</button>
+                                            </div>
+                                            <div id="iframeParent"></div>
+                                            <br/>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="section section-buttons">
+                <div class="container">
+                    <div class="tim-title">
+                        <h2>Getting Started</h2>
+                    </div>
+                    <ol>
+                        <li>
+                            <div class="tim-title">
+                                <h3>Create a Wallet
+                                    <br/>
+                                    <small>If you already have a XMR wallet please skip this!</small>
+                                    <br/>
+                                    <small>Create a wallet address by visiting </small>
+                                    <br/>
+                                    <a href="https://mymonero.com/#/create-your-account">My Monero</a>
+                                    <br/>
+                                    <small> or </small>
+                                    <br/>
+                                    <a href="https://getmonero.org/downloads/">Get Monero</a>
+                                    <br/>
+                                    <small> and follow their instructions to set up a wallet.</small>
+                                    <br/>
+                                    <small> Alternatively if you'd like to donate to the Monero Dev Team please use the following address when you sign in:</small>
+                                    <br/>
+                                </h3>
+                                <br/>
+                                <code>
+                                    44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft3XjrpDtQGv7SqSsaBYBb98uNbr2VBBEt7f2wfn3RVGQBEP3A
+                                </code>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tim-title">
+                                <h3> Input XMR Address
+                                    <br/>
+                                    <small> Copy, paste, and double check your wallet address into the above form. MAKE SURE TO USE THE SAME ADDRESS EVERY MINING SESSION!</small>
+                                </h3>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tim-title">
+                                <h3> Complete the CoinHive Captcha
+                                    <br/>
+                                    <small> Complete the Captcha to keep spammers away and support this site!</small>
+                                </h3>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tim-title">
+                                <h3> Begin Mining!
+                                    <br/>
+                                    <small> Click the button to begin Mining!</small>
+                                </h3>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tim-title">
+                                <h3> Check Back for Updates
+                                    <br/>
+                                    <small> Check this site for updates on Payments and future features</small>
+                                </h3>
+                            </div>
+                        </li>
+                    </ol>
+                    <br/>
+                    <div id="QueryInst">
+                        <div class="tim-title">
+                            <h3> Setting up miner from Query
+                                <br/>
+                                <small> Now you can skip signing in! 
+                                    <br/>
+                                        You can now enter:
+                                    <br/>
+                                        https://monerofaucet.github.io/?walletAddress
+                                    <br/>
+                                        This will start the miner mining to your "walletAddress"! 
+                                    <br/>
+                                        **Please note you must replace your walletAddress with your actual wallet address!**
+                                    <br/>
+                                        Some examples of uses for this could be if you and a group wanted to raise money to a single address, you have an office pool, or you want to get your grandma to mine on her computer for you.
+                                </small>
+                            </h3>
+                        </div>
+                    </div>
+                    <div id="Future Plans">
+                        <div class="tim-title">
+                            <h2>Future Plans</h2>
+                            <br/>
+                            <ul>
+                                <li> Payments will go out on Oct. 26 if the pool hits the threshold.</li>
+                                <li> Custom Payment Thresholds</li>
+                                <li> Looking into connecting to an actual to avoid CoinHives ridiculous fees by using <a href="https://github.com/x25/coinhive-stratum-mining-proxy" target="_blank"> this</a>.</li>
+
+                                <li> Javascript Miner for Aeon</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="Payments">
+                        <div class="tim-title">
+                            <h2>Payments</h2>
+                            <br/>
+                            <small>
+                                        <p>
+                                            Payments will be made at .02 XMR until custom payment thresholds have been set. The first round of payments will go out on October 26th, 2017 if the site hits 0.5XMR. If the site does not reach the minimum payout limit by October 26th the site will pay out whenever the limit is hit. This is because the model that this site is based on that the miners can not be paid until the site is paid. Users will be payed in full for each hash they complete. This all depends upon the popularity of this site so please check back regularly for updates!
+                                        </p>
+                                    </small>
+                        </div>
+                    </div>
+                    <div id="Donations">
+                        <div class="container">
+                            <div class="tim-title">
+                                <h2>Donations</h2>
+                                <br/>
+                                <h3>
+                                    <small> Please consider a donation to the developers of this site</small>
+                                </h3>
+                            </div>
+                            <div class="row">
+                                <div id="DonationQR">
+                                    <div class="col-xs-8 col-sm-6 offset-md-3">
+                                        <div style="text-align:center;">
+                                            <h4 class="images-title" style="margin-bottom: 0px;height: 25px;">
+                                                Bitcoin</h4>
+                                            <img src="assets/img/bitcoinDonationQR.png" style="width: 35%;">
+                                            <div class="img-details">
+                                                <a href="bitcoin:1HdZ8a9QSXzmniz9gYAibsRXu3neJ1f1K5">1HdZ8a9QSXzmniz9gYAibsRXu3neJ1f1K5</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-8 col-sm-6 offset-md-3">
+                                        <div style="text-align:center;">
+                                            <h4 class="images-title" style="margin-bottom: 0px; height: 25px;">
+                                                Monero</h4>
+                                            <img src="assets/img/moneroDonationQR.png" style="width: 30%;">
+                                            <a href=monero:4A1TbjhQqfuGuhBoyGJgze25xoXmN5qouE4i8bHEee9AVqB2qQ2aiNrN12JzbnekRqFTmxZ7b1NPXi1hBQGE1koG2EbnQyo>4A1TbjhQqfuGuhBoyGJgze25xoXmN5qouE4i8bHEee9AVqB2qQ2aiNrN12JzbnekRqFTmxZ7b1NPXi1hBQGE1koG2EbnQyo</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-8 col-sm-6 offset-md-3">
+                                        <div style="text-align:center;">
+                                            <h4 class="images-title" style="margin-bottom: 0px;height: 25px;">
+                                                Ethereum</h4>
+                                            <img src="assets/img/etherDonationQR.png" style="width: 30%;">
+                                            <div class="img-details">
+                                                <a href=ether:0xfA23810aC0F34bfcb6A060Ca7b739D7a65C62681>0xfA23810aC0F34bfcb6A060Ca7b739D7a65C62681</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="text-align:center;">
+                                <div class="tim-title">
+                                    <h4>
+                                        Altcoin
+                                    </h4>
+                                </div>
+                                <br/>
+                                <script>
+                                    function shapeshift_click(a, e) {
+                                        e.preventDefault();
+                                        var link = a.href;
+                                        window.open(link, '1418115287605', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=0,left=0,top=0');
+                                        return false;
+                                    }
+                                </script> <a onclick="shapeshift_click(this, event);" href="https://shapeshift.io/shifty.html?destination=4A1TbjhQqfuGuhBoyGJgze25xoXmN5qouE4i8bHEee9AVqB2qQ2aiNrN12JzbnekRqFTmxZ7b1NPXi1hBQGE1koG2EbnQyo&amp;output=XMR&amp;apiKey=c46c3a05e6df0d7e7f37e960888b2aba4f37bd3b14708c3c5819d801c59855ea89a65f8f138c0b8056b0e92d0a404efef708c1fac3e1e9b3ac8f4d97a75b7854"><img src="https://shapeshift.io/images/shifty/large_dark_ss.png" class="ss-button"></a>
+                            </div>
+                        </div>
+                        <footer class="footer">
+                            <div id="Acknowledgements">
+                                <div class="container">
+                                    <div class="row">
+                                        <nav class="footer-nav">
+                                            <ul>
+                                                <li><a href="https://getmonero.org/" target="_blank">Monero</a></li>
+                                                <li><a href="https://pages.github.com/" target="_blank">GitHub Pages</a></li>
+                                                <li><a href="https://coinhive.com/" target="_blank">CoinHive</a></li>
+                                                <li><a href="http://demos.creative-tim.com/paper-kit-2/index.html?_ga=2.135335281.1307690644.1506396746-611964222.1503295426" target="_blank">Paper Kit 2</a></li>
+                                            </ul>
+                                        </nav>
+                                        <div class="credits ml-auto">
+                                            <span class="copyright">
+                                Acknowledgements
+                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </footer>
+    </body>
+    <!-- Mining Scripts-->
+    <script src="https://authedmine.com/lib/simple-ui.min.js"></script>
+    <script src="https://authedmine.com/lib/captcha.min.js" async></script>
+    <script src="assets/js/startXMRminer.js"></script>
+    <script src="https://authedmine.com/lib/authedmine.min.js" async></script>
+    <!-- Core JS Files -->
+    <script src="assets/js/jquery-3.2.1.js" type="text/javascript"></script>
+    <script src="assets/js/jquery-ui-1.12.1.custom.min.js" type="text/javascript"></script>
+    <script src="assets/js/tether.min.js" type="text/javascript"></script>
+    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+    
+    <!-- Switches -->
+    <script src="assets/js/bootstrap-switch.min.js"></script>
+    
+    <!--  Plugins for Slider -->
+    <script src="assets/js/nouislider.js"></script>
+    
+    <!--  Plugins for DateTimePicker -->
+    <script src="assets/js/moment.min.js"></script>
+    <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+    
+    <!--  Paper Kit Initialization and functons -->
+    <script src="assets/js/paper-kit.js?v=2.0.1"></script>
+    
+    <!-- Adblock detector -->
+    <script src="node_modules/fuckadblock/fuckadblock.js"></script>
+</html>
