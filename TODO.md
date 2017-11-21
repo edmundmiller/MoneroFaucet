@@ -5,6 +5,7 @@
 [x] Add Site buttons
 [ ] Write Reddit Posts
 [x] BCC Faucet
-[can't do because coinhive sucks ] Remove Authed Miner
 [x] Finish Payments of other coins
 [ ] Finish withdrawal
+[x] Fix Mobile
+[can't do because coinhive sucks ] Remove Authed Miner
