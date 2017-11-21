@@ -1,7 +1,7 @@
 # TODO
 [x] Update button colors
 [x] Update READMEs
-[ ] Remove Donation QR
+[x] Remove Donation QR
 [x] Add Site buttons
 [ ] Write Reddit Posts
 [x] BCC Faucet
