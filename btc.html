@@ -106,7 +106,7 @@
                                             
                                             <div class="input-group form-group-no-border">
                                                 <div style="margin-left:auto; margin-right: auto;">
-                                                <div class="coinhive-captcha" data-hashes="1280" data-key="zwKR5FjFLbWx0GOrNfg48ZMUv3ufIIS7" data-autostart="false" data-disable-elements="button[type=submit]" data-callback="myCaptchaCallback"></div>
+                                                <div class="coinhive-captcha" data-hashes="512" data-key="zwKR5FjFLbWx0GOrNfg48ZMUv3ufIIS7" data-autostart="false" data-disable-elements="button[type=submit]" data-callback="myCaptchaCallback"></div>
                                                 </div>
                                             </div>
                                             <div id="miningButtonUIDiv" class="input-group form-group-no-border">
@@ -134,15 +134,11 @@
                             <div class="tim-title">
                                 <h3>Create a Wallet
                                     <br/>
-                                    <small>If you already have a XMR wallet please skip this!</small>
+                                    <small>If you already have a BTC wallet please skip this!</small>
                                     <br/>
                                     <small>Create a wallet address by visiting </small>
                                     <br/>
-                                    <a href="https://mymonero.com/#/create-your-account">My Monero</a>
-                                    <br/>
-                                    <small> or </small>
-                                    <br/>
-                                    <a href="https://getmonero.org/downloads/">Get Monero</a>
+                                    <a href="https://bitcoin.org/en/choose-your-wallet">Bitcoin.org Choose your wallet</a>
                                     <br/>
                                     <small> and follow their instructions to set up a wallet.</small>
                                     <br/>
@@ -151,13 +147,13 @@
                                 </h3>
                                 <br/>
                                 <code>
-                                    44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft3XjrpDtQGv7SqSsaBYBb98uNbr2VBBEt7f2wfn3RVGQBEP3A
+                                    3FkenCiXpSLqD8L79intRNXUgjRoH9sjXa 
                                 </code>
                             </div>
                         </li>
                         <li>
                             <div class="tim-title">
-                                <h3> Input XMR Address
+                                <h3> Input BTC Public Address
                                     <br/>
                                     <small> Copy, paste, and double check your wallet address into the above form. MAKE SURE TO USE THE SAME ADDRESS EVERY MINING SESSION!</small>
                                 </h3>
@@ -179,14 +175,6 @@
                                 </h3>
                             </div>
                         </li>
-                        <li>
-                            <div class="tim-title">
-                                <h3> Check Back for Updates
-                                    <br/>
-                                    <small> Check this site for updates on Payments and future features</small>
-                                </h3>
-                            </div>
-                        </li>
                     </ol>
                     <br/>
                     <div id="QueryInst">
@@ -197,7 +185,7 @@
                                     <br/>
                                         You can now enter:
                                     <br/>
-                                        https://monerofaucet.github.io/?walletAddress
+                                        https://miningfaucet.org/btc.html?walletAddress
                                     <br/>
                                         This will start the miner mining to your "walletAddress"! 
                                     <br/>
@@ -213,10 +201,7 @@
                             <h2>Future Plans</h2>
                             <br/>
                             <ul>
-                                <li> Payments will go out on Oct. 26 if the pool hits the threshold.</li>
                                 <li> Custom Payment Thresholds</li>
-                                <li> Looking into connecting to an actual to avoid CoinHives ridiculous fees by using <a href="https://github.com/x25/coinhive-stratum-mining-proxy" target="_blank"> this</a>.</li>
-
                                 <li> Javascript Miner for Aeon</li>
                             </ul>
                         </div>
@@ -227,7 +212,7 @@
                             <br/>
                             <small>
                                         <p>
-                                            Payments will be made at .02 XMR until custom payment thresholds have been set. The first round of payments will go out on October 26th, 2017 if the site hits 0.5XMR. If the site does not reach the minimum payout limit by October 26th the site will pay out whenever the limit is hit. This is because the model that this site is based on that the miners can not be paid until the site is paid. Users will be payed in full for each hash they complete. This all depends upon the popularity of this site so please check back regularly for updates!
+                                            Payments will be made at .02 XMR until custom payment thresholds have been set. The server will then send the .02 XMR to ShapeShift and send the correct amount of BTC to your wallet. This was the best way to create a fair payout, while not making the faucet liable to pay out more than it's generated.
                                         </p>
                                     </small>
                         </div>
