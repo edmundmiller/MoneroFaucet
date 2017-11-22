@@ -8,4 +8,5 @@
 [x] Finish Payments of other coins
 [ ] Finish withdrawal
 [x] Fix Mobile
+[x] Sitemap
 [can't do because coinhive sucks ] Remove Authed Miner
