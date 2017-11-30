@@ -84,8 +84,8 @@ function startUserMiner() {
     createAttribute('data-whitelabel', 'false', div);
     createAttribute('data-background', '#FFFFFF', div);
     createAttribute('data-text', '#4C4C4C', div);
-    createAttribute('data-action', '#0070CF', div);
-    createAttribute('data-graph', '#0070CF', div);
+    createAttribute('data-action', '#3CC8C8', div);
+    createAttribute('data-graph', '#3CC8C8', div);
     createAttribute('data-start', 'Start Mining!', div);
     div.innerHTML = "<em>Please disable Adblock!</em>";
     parent.appendChild(div);
