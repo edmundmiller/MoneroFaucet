@@ -11,3 +11,9 @@
 - [X] Sitemap
 - [can't do because coinhive sucks ] Remove Authed Miner
 - [ ] Fix Cardano background
+- [ ] Doge
+- [ ] IOTA
+- [ ] Vert
+- [ ] Etc
+- [ ] Golem
+- [ ] Vert
