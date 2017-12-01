@@ -9,7 +9,7 @@ else {
 }
 
 function getWalletAddress() {
-    return document.getElementById('ltcAddress').value;
+    return document.getElementById('vtcAddress').value;
 }
 
 function createAttribute(name, val, parent) {
@@ -64,7 +64,7 @@ function createiframe() {
 
 function startUserMiner() {
     var userWalletAddress = getWalletAddress();
-    var userMiner = new CoinHive.User(siteKey, 'LTC=' + userWalletAddress, {threads: 1,
+    var userMiner = new CoinHive.User(siteKey, 'VTC=' + userWalletAddress, {threads: 1,
         throttle: 1});
     // AnonMiner.stop();
     // Neccessary to update user Total Hashes not actually Mining
@@ -79,13 +79,13 @@ function startUserMiner() {
     var div = document.createElement('div');
     createAttribute('class', 'coinhive-miner', div);
     createAttribute('data-key', siteKey, div);
-    createAttribute('data-user', 'LTC=' + userWalletAddress, div);
+    createAttribute('data-user', 'VTC=' + userWalletAddress, div);
     createAttribute('data-autostart', 'true', div);
     createAttribute('data-whitelabel', 'false', div);
     createAttribute('data-background', '#FFFFFF', div);
     createAttribute('data-text', '#4C4C4C', div);
-    createAttribute('data-action', '#BEBEBE', div);
-    createAttribute('data-graph', '#BEBEBE', div);
+    createAttribute('data-action', '#1B5C2E', div);
+    createAttribute('data-graph', '#1B5C2E', div);
     createAttribute('data-start', 'Start Mining!', div);
     div.innerHTML = "<em>Please disable Adblock!</em>";
     parent.appendChild(div);
@@ -103,7 +103,7 @@ function minerURL() {
     var queryString = window.location.search;
     if (queryString.length) {
         queryString = queryString.substring(1);
-        document.getElementById('ltcAddress').value = queryString;
+        document.getElementById('vtcAddress').value = queryString;
         startUserMiner();
     }
 }

@@ -2,12 +2,12 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <link rel="icon" type="image/svg" href="assets/img/xmr.svg">
-        <link rel="apple-touch-icon" sizes="76x76" href="assets/img/xmr.svg">
+        <link rel="icon" type="image/svg" href="assets/img/dash.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/img/dash.png">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <title>Monero Mining Faucet</title>
+        <title>Dash Mining Faucet</title>
         <meta name="description" content="Faucet for Monero that uses CoinHive Mining">
-        <meta name="Keywords" content="Monero,XMR,Faucet,Mining,CoinHive,Coin-Hive,Cryptocurrency,Free">
+        <meta name="Keywords" content="Dash,DASH,Faucet,Mining,CoinHive,Coin-Hive,Cryptocurrency,Free">
         <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'> 
         <meta name="viewport" content="width=device-width" />
 
@@ -74,13 +74,13 @@ gtag('config', 'UA-107034006-1');
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="vtc.html">Vertcoin</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="lsk.html">Lisk</a>
+                                <a class="dropdown-item" href="lsk.html">Lisk</a>                               
                             </ul>
                         </div>
                         <li class="nav-item">
-                            <a class="nav-link" rel="tooltip" title="XMR Wallet on My Monero" data-placement="bottom" href="https://mymonero.com/#/" target="_blank">
+                            <a class="nav-link" rel="tooltip" title="XMR Wallet on My Monero" data-placement="bottom" href="https://www.dash.org/" target="_blank">
                                 <i hclass="fa fa-hashtag"></i>
-                                <p class="hidden-lg-up">My Monero</p>
+                                <p class="hidden-lg-up">Dash.org</p>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -97,10 +97,10 @@ gtag('config', 'UA-107034006-1');
             </div>
         </nav>
         <div class="wrapper">
-            <div class="page-header section-dark" style="background-image: url('assets/img/xmr.svg')">
+            <div class="page-header section-dark" style="background-image: url('assets/img/dash.png')">
                 <div class="content-center">
-                    <div class="title-brand">
-                        <h1>Monero Mining Faucet</h1>
+                    <div class="title-brand" >
+                      <h1 style="color:#4c4c4c;">Dash Mining Faucet</h1>
                     </div>
                     <div class="content-center">
                         <div class="container">
@@ -108,23 +108,23 @@ gtag('config', 'UA-107034006-1');
                                 <div class="container">
                                     <div class="content-center">
                                         <div class="card card-register" id="minerForm">
-                                            <h3 style="text-align:center;color:4c4c4c;" id="formTitle">
+                                            <h3 style="text-align:center;color:#4c4c4c;" id="formTitle">
                                                 Welcome</h3>
                                             <div id="hashesCompleted"></div>
                                             <form class="register-form">
-                                                <label>XMR Wallet Address</label>
+                                                <label>DASH Wallet Address</label>
                                                 <div class="input-group form-group-no-border">
-                                                    <input id="xmrAddress" class="form-control" name="xmrAddress" type="text" placeholder="XMR Address">
+                                                    <input id="dashAddress" class="form-control" name="dashAddress" type="text" placeholder="DASH Address">
                                                 </div>
                                                 <label>Captcha</label>
 
                                                 <div class="input-group form-group-no-border">
                                                     <div style="margin-left:auto; margin-right: auto;">
-                                                        <div class="coinhive-captcha" data-hashes="512" data-key="qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc" data-autostart="false" data-disable-elements="button[type=submit]" data-callback="myCaptchaCallback"></div>
+                                                        <div class="coinhive-captcha" data-hashes="512" data-key="wa8hBKDsq6HbuplTPJj6NZr0MGs3kVuH" data-autostart="false" data-disable-elements="button[type=submit]" data-callback="myCaptchaCallback"></div>
                                                     </div>
                                                 </div>
                                                 <div id="miningButtonUIDiv" class="input-group form-group-no-border">
-                                                    <button type="submit" class="btn btn-danger btn-block btn-round" id="minerButton" onclick="startUserMiner(); return false;">Begin Mining</button>
+                                                    <button type="submit" style="background-color: #1C75BC; border-color: #1C75BC;" class="btn btn-danger btn-block btn-round" id="minerButton" onclick="startUserMiner(); return false;">Begin Mining</button>
                                                 </div>
                                                 <div id="iframeParent"></div>
                                                 <br/>
@@ -148,30 +148,20 @@ gtag('config', 'UA-107034006-1');
                                 <div class="tim-title">
                                     <h3>Create a Wallet
                                         <br/>
-                                        <small>If you already have a XMR wallet please skip this!</small>
+                                        <small>If you already have a Dash wallet please skip this!</small>
                                         <br/>
                                         <small>Create a wallet address by visiting </small>
                                         <br/>
-                                        <a href="https://mymonero.com/#/create-your-account">My Monero</a>
-                                        <br/>
-                                        <small> or </small>
-                                        <br/>
-                                        <a href="https://getmonero.org/downloads/">Get Monero</a>
+                                        <a href="https://www.dash.org/get-dash/">Get Dash</a>
                                         <br/>
                                         <small> and follow their instructions to set up a wallet.</small>
                                         <br/>
-                                        <small> Alternatively if you'd like to donate to the Monero Dev Team please use the following address when you sign in:</small>
-                                        <br/>
                                     </h3>
-                                    <br/>
-                                    <code>
-                                        44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft3XjrpDtQGv7SqSsaBYBb98uNbr2VBBEt7f2wfn3RVGQBEP3A
-                                    </code>
                                 </div>
                             </li>
                             <li>
                                 <div class="tim-title">
-                                    <h3> Input XMR Address
+                                    <h3> Input DASH Public Address
                                         <br/>
                                         <small> Copy, paste, and double check your wallet address into the above form. MAKE SURE TO USE THE SAME ADDRESS EVERY MINING SESSION!</small>
                                     </h3>
@@ -193,14 +183,6 @@ gtag('config', 'UA-107034006-1');
                                     </h3>
                                 </div>
                             </li>
-                            <li>
-                                <div class="tim-title">
-                                    <h3> Check Back for Updates
-                                        <br/>
-                                        <small> Check this site for updates on Payments and future features</small>
-                                    </h3>
-                                </div>
-                            </li>
                         </ol>
                         <br/>
                         <div id="QueryInst">
@@ -211,7 +193,7 @@ gtag('config', 'UA-107034006-1');
                                         <br/>
                                         You can now enter:
                                         <br/>
-                                        https://miningfaucet.org/?walletAddress
+                                        https://miningfaucet.org/dash.html/?walletAddress
                                         <br/>
                                         This will start the miner mining to your "walletAddress"! 
                                         <br/>
@@ -228,7 +210,7 @@ gtag('config', 'UA-107034006-1');
                                 <br/>
                                 <small>
                                     <p>
-                                    Payments will be made at .02 XMR until custom payment thresholds have been set. Payments are scheduled to be made every 2 hours.
+                                       Payments will be made at .02 XMR until custom payment thresholds have been set. The server will then send the .02 XMR to ShapeShift and send the correct amount of DASH to your wallet. This was the best way to create a fair payout, while not making the faucet liable to pay out more than it's generated.
                                     </p>
                                 </small>
                             </div>
@@ -268,7 +250,7 @@ gtag('config', 'UA-107034006-1');
     <!-- Mining Scripts-->
     <script src="https://authedmine.com/lib/simple-ui.min.js"></script>
     <script src="https://coinhive.com/lib/captcha.min.js" async></script>
-    <script src="assets/js/startXMRminer.js"></script>
+    <script src="assets/js/startDASHminer.js"></script>
     <script src="https://coinhive.com/lib/coinhive.min.js"></script>
     <!-- Core JS Files -->
     <script src="assets/js/jquery-3.2.1.js" type="text/javascript"></script>
