@@ -12,10 +12,9 @@
 - [can't do because coinhive sucks ] Remove Authed Miner
 - [ ] Fix Cardano background
 - [X] Doge
-    - Fix background
-- [ ] IOTA
+    - [x] Fix background
+- [X] IOTA
 - [X] Vert
-    - Fix background
+   - [X] Fix background
 - [X] Etc
-    - Fix background
-- [ ] Golem
+    - [X] Fix background
