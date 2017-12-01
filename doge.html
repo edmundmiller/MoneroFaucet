@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg" href="assets/img/doge.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/doge.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Dogecoin Mining Faucet</title>
+    <meta name="description" content="Faucet for Dogecoin that uses CoinHive Mining">
+    <meta name="Keywords" content="Dogecoin,DOGE,Faucet,Mining,CoinHive,Coin-Hive,Cryptocurrency,Free">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="alternate" href="https://miningfaucet.org/" hrefla displayHashesng="en-us" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/paper-kit.css?v=2.0.1" rel="stylesheet" />
+    <!--link href="assets/css/demo.css" rel="stylesheet" /-->
+
+    <!--     Fonts and icons     -->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,300,700' rel='stylesheet' type='text/css'>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type='text/css'>
+    <link href="assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/font-awesome-4.7.0/css">
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107034006-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-107034006-1');
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-toggleable-md fixed-top navbar-transparent" color-on-scroll="500">
+        <div class="container">
+            
+            <div class="navbar-translate">
+                <button class="navbar-toggler navbar-toggler-right navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-bar"></span>
+                        <span class="navbar-toggler-bar"></span>
+                        <span class="navbar-toggler-bar"></span>
+                    </button>
+                <a class="navbar-brand" href="https://miningfaucet.org/">The Mining Faucet</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav ml-auto">
+                    <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="dropdownMenuButton" href="#pk" role="button" aria-haspopup="true" aria-expanded="false">Faucets</a>
+                            <ul class="dropdown-menu dropdown-info" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="index.html">Monero</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="btc.html">Bitcoin</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="eth.html">Ethereum</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="ltc.html">Litecoin</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="bcc.html">Bitcoin Cash</a>
+                            </ul>
+                        </div>
+<li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Learn about Dogecoin" data-placement="bottom" href="http://dogecoin.com/" target="_blank">
+                            <i class="fa fa-hashtag"></i>
+                            <p class="hidden-lg-up">Dogecoin.com</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Star on GitHub" data-placement="bottom" href="https://github.com/Emiller88/MoneroFaucet" target="_blank">
+                            <i class="fa fa-github" aria-hidden="true"></i>
+                            <p class="hidden-lg-up">GitHub</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#Acknowledgements" class="nav-link">Acknowledgements</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="wrapper">
+        <div class="page-header section-dark" style="background-image: url('assets/img/doge.png">
+            <div class="content-center">
+                <div class="title-brand" >
+                    <h1 style="color:#4c4c4c;">Dogecoin Mining Faucet</h1>
+                </div>
+                <div class="content-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="container">
+                                <div class="content-center">
+                                    <div class="card card-register" id="minerForm">
+                                        <h3 style="text-align:center;color:#4c4c4c;" id="formTitle">
+                                            Welcome</h3>
+                                        <div id="hashesCompleted"></div>
+                                        <form class="register-form">
+                                            <label>DOGE Wallet Address</label>
+                                            <div class="input-group form-group-no-border">
+                                                <input id="dogeAddress" class="form-control" name="dogeAddress" type="text" placeholder="DOGE Address">
+                                            </div>
+                                            <label>Captcha</label>
+                                            
+                                            <div class="input-group form-group-no-border">
+                                                <div style="margin-left:auto; margin-right: auto;">
+                                                <div class="coinhive-captcha" data-hashes="512" data-key="wa8hBKDsq6HbuplTPJj6NZr0MGs3kVuH" data-autostart="false" data-disable-elements="button[type=submit]" data-callback="myCaptchaCallback"></div>
+                                                </div>
+                                            </div>
+                                            <div id="miningButtonUIDiv" class="input-group form-group-no-border">
+                                                <button type="submit" style="background-color: #BA9F33; border-color: #BA9F33;" class="btn btn-danger btn-block btn-round" id="minerButton" onclick="startUserMiner(); return false;">Begin Mining</button>
+                                            </div>
+                                            <div id="iframeParent"></div>
+                                            <br/>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="section section-buttons">
+                <div class="container">
+                    <div class="tim-title">
+                        <h2>Getting Started</h2>
+                    </div>
+                    <ol>
+                        <li>
+                            <div class="tim-title">
+                                <h3>Create a Wallet
+                                    <br/>
+                                    <small>If you already have a DOGE wallet please skip this!</small>
+                                    <br/>
+                                    <small>Create a wallet address by visiting </small>
+                                    <br/>
+                                    <a href="http://dogecoin.com/getting-started/">Dogecoin Wallet Download</a>
+                                    <br/>
+                                    <small> and follow their instructions to set up a wallet.</small>
+                                </h3>
+                                <br/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tim-title">
+                                <h3> Input DOGE Public Address
+                                    <br/>
+                                    <small> Copy, paste, and double check your wallet address into the above form. MAKE SURE TO USE THE SAME ADDRESS EVERY MINING SESSION!</small>
+                                </h3>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tim-title">
+                                <h3> Complete the CoinHive Captcha
+                                    <br/>
+                                    <small> Complete the Captcha to keep spammers away and support this site!</small>
+                                </h3>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tim-title">
+                                <h3> Begin Mining!
+                                    <br/>
+                                    <small> Click the button to begin Mining!</small>
+                                </h3>
+                            </div>
+                        </li>
+                    </ol>
+                    <br/>
+                    <div id="QueryInst">
+                        <div class="tim-title">
+                            <h3> Setting up miner from Query
+                                <br/>
+                                <small> Now you can skip signing in! 
+                                    <br/>
+                                        You can now enter:
+                                    <br/>
+                                        https://miningfaucet.org/doge.html?walletAddress
+                                    <br/>
+                                        This will start the miner mining to your "walletAddress"! 
+                                    <br/>
+                                        **Please note you must replace your walletAddress with your actual wallet address!**
+                                    <br/>
+                                        Some examples of uses for this could be if you and a group wanted to raise money to a single address, you have an office pool, or you want to get your grandma to mine on her computer for you.
+                                </small>
+                            </h3>
+                        </div>
+                    </div>
+                    <div id="Future Plans">
+                        <div class="tim-title">
+                            <h2>Future Plans</h2>
+                            <br/>
+                            <ul>
+                                <li> Custom Payment Thresholds</li>
+                                <li> Javascript Miner for Aeon</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="Payments">
+                        <div class="tim-title">
+                            <h2>Payments</h2>
+                            <br/>
+                            <small>
+                                        <p>
+                                            Payments will be made at .02 XMR until custom payment thresholds have been set. The server will then send the .02 XMR to ShapeShift and send the correct amount of DOGE to your wallet. This was the best way to create a fair payout, while not making the faucet liable to pay out more than it's generated.
+                                        </p>
+                                    </small>
+                        </div>
+                    </div>
+                        <footer class="footer">
+                            <div id="Acknowledgements">
+                                <div class="container">
+                                    <div class="row">
+                                        <nav class="footer-nav">
+                                            <ul>
+                                                <li><a href="https://getmonero.org/" target="_blank">Monero</a></li>
+                                                <li><a href="https://pages.github.com/" target="_blank">GitHub Pages</a></li>
+                                                <li><a href="https://coinhive.com/" target="_blank">CoinHive</a></li>
+                                                <li><a href="http://demos.creative-tim.com/paper-kit-2/index.html?_ga=2.135335281.1307690644.1506396746-611964222.1503295426" target="_blank">Paper Kit 2</a></li>
+                                            </ul>
+                                        </nav>
+                                        <div class="credits ml-auto">
+                                            <span class="copyright">
+                                Acknowledgements
+                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </footer>
+    </body>
+    <!-- Mining Scripts-->
+    <script src="https://authedmine.com/lib/simple-ui.min.js"></script>
+    <script src="https://authedmine.com/lib/captcha.min.js" async></script>
+    <script src="assets/js/startDOGEminer.js"></script>
+    <script src="https://coinhive.com/lib/coinhive.min.js" async></script>
+    <!-- Core JS Files -->
+    <script src="assets/js/jquery-3.2.1.js" type="text/javascript"></script>
+    <script src="assets/js/jquery-ui-1.12.1.custom.min.js" type="text/javascript"></script>
+    <script src="assets/js/tether.min.js" type="text/javascript"></script>
+    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+    
+    <!-- Switches -->
+    <script src="assets/js/bootstrap-switch.min.js"></script>
+    
+    <!--  Plugins for Slider -->
+    <script src="assets/js/nouislider.js"></script>
+    
+    <!--  Plugins for DateTimePicker -->
+    <script src="assets/js/moment.min.js"></script>
+    <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+    
+    <!--  Paper Kit Initialization and functons -->
+    <script src="assets/js/paper-kit.js?v=2.0.1"></script>
+    
+    <!-- Adblock detector -->
+    <script src="node_modules/fuckadblock/fuckadblock.js"></script>
+</html>
