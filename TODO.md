@@ -1,4 +1,6 @@
 # TODO
+
+## Finished Stuff
 - [X] Update button colors
 - [X] Update READMEs
 - [X] Remove Donation QR
