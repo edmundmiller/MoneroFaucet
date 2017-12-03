@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>https://miningfaucet.org/</loc>
+  <lastmod>2017-12-01T18:06:34+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://miningfaucet.org/index.html</loc>
+  <lastmod>2017-12-01T18:06:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://miningfaucet.org/btc.html</loc>
+  <lastmod>2017-12-01T18:06:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://miningfaucet.org/eth.html</loc>
+  <lastmod>2017-12-01T18:06:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://miningfaucet.org/ltc.html</loc>
+  <lastmod>2017-12-01T18:06:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://miningfaucet.org/iota.html</loc>
+  <lastmod>2017-12-01T18:06:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://miningfaucet.org/xrp.html</loc>
+  <lastmod>2017-12-01T18:06:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://miningfaucet.org/dash.html</loc>
+  <lastmod>2017-12-01T18:06:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://miningfaucet.org/doge.html</loc>
+  <lastmod>2017-12-01T18:06:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://miningfaucet.org/etc.html</loc>
+  <lastmod>2017-12-01T18:06:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://miningfaucet.org/bcc.html</loc>
+  <lastmod>2017-12-01T18:06:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://miningfaucet.org/ada.html</loc>
+  <lastmod>2017-12-01T18:06:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://miningfaucet.org/vtc.html</loc>
+  <lastmod>2017-12-01T18:06:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://miningfaucet.org/lsk.html</loc>
+  <lastmod>2017-12-01T18:06:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+</urlset>
