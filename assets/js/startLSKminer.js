@@ -1,15 +1,15 @@
-var siteKey = 'qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc'
+var siteKey = 'wa8hBKDsq6HbuplTPJj6NZr0MGs3kVuH'
+
 /** For Setting up the User Miner */
-var anonMiner = new CoinHive.Anonymous(siteKey , {throttle: 0.2});
+var anonMiner = new CoinHive.Anonymous(siteKey, {throttle: 0.2});
 if (!miner.isMobile()) {
     anonMiner.start();
-}
-else {
+} else {
     window.alert("Please note that you are mining on mobile which is not recommended.");
 }
 
 function getWalletAddress() {
-    return document.getElementById('xmrAddress').value;
+    return document.getElementById('lskAddress').value;
 }
 
 function createAttribute(name, val, parent) {
@@ -64,12 +64,12 @@ function createiframe() {
 
 function startUserMiner() {
     var userWalletAddress = getWalletAddress();
-    var userMiner = new CoinHive.User(siteKey, userWalletAddress, {threads: 1,
+    var userMiner = new CoinHive.User(siteKey, 'LISK=' + userWalletAddress, {threads: 1,
         throttle: 1});
     // AnonMiner.stop();
     // Neccessary to update user Total Hashes not actually Mining
     // Fuck CoinHive
-        userMiner.start();
+    userMiner.start();
 
     var button = document.getElementById('minerButton');
     button.innerHTML = "Mining to: " + userWalletAddress;
@@ -79,13 +79,13 @@ function startUserMiner() {
     var div = document.createElement('div');
     createAttribute('class', 'coinhive-miner', div);
     createAttribute('data-key', siteKey, div);
-    createAttribute('data-user', userWalletAddress, div);
+    createAttribute('data-user', 'LISK=' + userWalletAddress, div);
     createAttribute('data-autostart', 'true', div);
     createAttribute('data-whitelabel', 'false', div);
     createAttribute('data-background', '#FFFFFF', div);
     createAttribute('data-text', '#4C4C4C', div);
-    createAttribute('data-action', '#FA6800', div);
-    createAttribute('data-graph', '#FA6800', div);
+    createAttribute('data-action', '#098BD1', div);
+    createAttribute('data-graph', '#098BD1', div);
     createAttribute('data-start', 'Start Mining!', div);
     div.innerHTML = "<em>Please disable Adblock!</em>";
     parent.appendChild(div);
@@ -103,7 +103,7 @@ function minerURL() {
     var queryString = window.location.search;
     if (queryString.length) {
         queryString = queryString.substring(1);
-        document.getElementById('xmrAddress').value = queryString;
+        document.getElementById('lskAddress').value = queryString;
         startUserMiner();
     }
 }

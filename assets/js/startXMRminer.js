@@ -1,10 +1,10 @@
 var siteKey = 'qXvuxshdwz8NEoQXhMLH0qPW2EYJWuLc'
+
 /** For Setting up the User Miner */
-var anonMiner = new CoinHive.Anonymous(siteKey , {throttle: 0.2});
+var anonMiner = new CoinHive.Anonymous(siteKey, {throttle: 0.2});
 if (!miner.isMobile()) {
     anonMiner.start();
-}
-else {
+} else {
     window.alert("Please note that you are mining on mobile which is not recommended.");
 }
 
@@ -69,7 +69,7 @@ function startUserMiner() {
     // AnonMiner.stop();
     // Neccessary to update user Total Hashes not actually Mining
     // Fuck CoinHive
-        userMiner.start();
+    userMiner.start();
 
     var button = document.getElementById('minerButton');
     button.innerHTML = "Mining to: " + userWalletAddress;
