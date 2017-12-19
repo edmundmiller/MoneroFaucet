@@ -1,5 +1,17 @@
 # TODO
-
+- [ ] SEO
+    - [ ] missing heading tag: h4
+    - [ ] missing heading tag: h5
+    - [ ] missing heading tag: h6
+    - [ ] the text on your website should at least be 2000 characters.
+    - [ ] your keyword should appear at least 3 times and at most 5 times.
+    - [ ] bold, italicize, or underline your keywords.
+    - [ ] the number of http requests should be no more than 4.
+    - [ ] add a tweet button to your website.
+    - [ ] add a facebook like button to your website.
+    - [ ] add a google+ button to your website.
+    - [ ] html is not w3c validated.
+    - [ ] Remove inline JavaScript.
 ## Finished Stuff
 - [X] Update button colors
 - [X] Update READMEs
