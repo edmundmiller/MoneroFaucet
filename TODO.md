@@ -1,5 +1,4 @@
 # TODO
-- [ ] Add Stellar 
 - [ ] Add Tron 
 - [ ] Add EoS 
 - [ ] Fix Cardano background
@@ -37,3 +36,4 @@
     - [X] Fix background
 - [X] Add RaiBlocks 
 - [X] Add NEM 
+- [X] Add Stellar 
