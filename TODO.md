@@ -1,6 +1,4 @@
 # TODO
-- [ ] Add RaiBlocks 
-- [ ] Add NEM 
 - [ ] Add Stellar 
 - [ ] Add Tron 
 - [ ] Add EoS 
@@ -37,3 +35,5 @@
    - [X] Fix background
 - [X] Etc
     - [X] Fix background
+- [X] Add RaiBlocks 
+- [X] Add NEM 
