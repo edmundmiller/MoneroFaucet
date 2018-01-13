@@ -1,6 +1,4 @@
 # TODO
-- [ ] Add Tron 
-- [ ] Add EoS 
 - [ ] Fix Cardano background
 - [ ] SEO
     - [ ] missing heading tag: h4
@@ -37,3 +35,5 @@
 - [X] Add RaiBlocks 
 - [X] Add NEM 
 - [X] Add Stellar 
+- [X] Add Tron 
+- [X] Add EoS 
