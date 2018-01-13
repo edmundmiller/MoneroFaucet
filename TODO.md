@@ -1,4 +1,10 @@
 # TODO
+- [ ] Add RaiBlocks 
+- [ ] Add NEM 
+- [ ] Add Stellar 
+- [ ] Add Tron 
+- [ ] Add EoS 
+- [ ] Fix Cardano background
 - [ ] SEO
     - [ ] missing heading tag: h4
     - [ ] missing heading tag: h5
@@ -24,7 +30,6 @@
 - [X] Fix Mobile
 - [X] Sitemap
 - [can't do because coinhive sucks ] Remove Authed Miner
-- [ ] Fix Cardano background
 - [X] Doge
     - [x] Fix background
 - [X] IOTA
